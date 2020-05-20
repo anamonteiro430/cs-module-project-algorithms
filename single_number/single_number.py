@@ -2,10 +2,11 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-def single_number(arr):
+def single_number(arr): #[1, 1, 2, 3, 3]
     # Your code here
-
-    pass
+    odd = arr[0]
+    for i in arr:
+        print(i)
 
 
 if __name__ == '__main__':
