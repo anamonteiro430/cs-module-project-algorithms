@@ -21,3 +21,26 @@ if __name__ == '__main__':
     arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
     print(f"The odd-number-out is {single_number(arr)}")
+
+#O(2 * n) ~ O(n)
+def single_number(nums):
+    #keep track of counts of how many times there's a number
+    #dicts are better for searching
+    counts = {}
+
+    #O(n)
+    #loop through nums to see how many times a number appears
+    for i in nums:
+        if i in counts: #O(1)
+            del counts[i]
+        else:
+            counts[i] = 1
+
+    for num in counts:
+        if counts[num] == 1:
+            return num
+
+
+""" def single_number(Arr):
+    print((sum(set(arr))*2) - sum(arr))
+    return 2*sum(set(arr)) - sum(arr) """
