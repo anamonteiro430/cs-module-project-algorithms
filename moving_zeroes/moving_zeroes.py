@@ -3,22 +3,22 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
+    count = arr.count(0)
+    zeros_list = [0 for i in range(count)]
+    print(zeros_list)
     #iterate through array
-    for i in range(0, len(arr)):
-        #if the number is zero
-        if arr[i] == 0:
-            #store the popped value 
-            removed = arr.pop(i)
-            #append the zeros to the end of array
-            arr.append(removed) 
-            #decrement i to go through all the indexes
-            i -= 1
-             
+    x = [i for i in arr if i != 0]
+    print(x)
+    arr= x + zeros_list
     return arr
+
+      
+        
+             
 
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
-    arr = [1, 2, 3, 0, 4, 0, 0]
+    arr = [0, 0, 0, 0, 3, 2, 1]
 
     print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
