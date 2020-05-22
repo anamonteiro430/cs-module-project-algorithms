@@ -53,6 +53,7 @@ class Test(unittest.TestCase):
 
         for x in answer[:3]:
             self.assertTrue(x in arr)
+            print(x)
             self.assertTrue(x != 0)
 
         for x in answer[3:]:
